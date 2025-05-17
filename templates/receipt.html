@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .receipt { width: 300px; margin: auto; padding: 20px; border: 1px solid #000; }
+        h2, p { text-align: center; margin: 5px 0; }
+        .details, .totals { margin-top: 20px; }
+        .totals p { text-align: right; }
+        .divider { border-top: 1px dashed #000; margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <div class="receipt">
+        <h2>PAID</h2>
+        <p>Sanket's Pizza Hut</p>
+        <p>Vairag</p>
+        <div class="divider"></div>
+        <p><strong>Name:</strong> {{ name }}</p>
+        <p><strong>Date:</strong> {{ date }} <strong>Time:</strong> {{ time }}</p>
+        <div class="divider"></div>
+        <p><strong>Item:</strong> {{ item }}</p>
+        <p><strong>Quantity:</strong> {{ quantity }}</p>
+        <p><strong>Price per Item:</strong> ₹{{ price_per_item }}</p>
+        <div class="divider"></div>
+        <div class="totals">
+            <p><strong>Subtotal:</strong> ₹{{ subtotal }}</p>
+            <p><strong>CGST 2.5%:</strong> ₹{{ cgst }}</p>
+            <p><strong>SGST 2.5%:</strong> ₹{{ sgst }}</p>
+            <p><strong>Round Off:</strong> ₹{{ round_off }}</p>
+            <h3>Grand Total: ₹{{ grand_total }}</h3>
+        </div>
+        <div class="divider"></div>
+        <p>Thanks & Visit Again!</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receipt Generator</title>
+</head>
+<body>
+    <h2>Generate Receipt</h2>
+    <form action="/generate_receipt" method="POST">
+        <label>Name:</label><br>
+        <input type="text" name="name" required><br><br>
+
+        <label>Item:</label><br>
+        <input type="text" name="item" required><br><br>
+
+        <label>Quantity:</label><br>
+        <input type="number" name="quantity" required><br><br>
+
+        <label>Price per Item:</label><br>
+        <input type="number" name="price" step="0.01" required><br><br>
+
+        <button type="submit">Generate Receipt</button>
+    </form>
+</body>
+</html>
