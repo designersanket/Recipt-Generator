@@ -5,12 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receipt</title>
     <style>
-        body { font-family: Arial, sans-serif; }
-        .receipt { width: 300px; margin: auto; padding: 20px; border: 1px solid #000; }
-        h2, p { text-align: center; margin: 5px 0; }
-        .details, .totals { margin-top: 20px; }
-        .totals p { text-align: right; }
-        .divider { border-top: 1px dashed #000; margin: 10px 0; }
+        body { 
+            font-family: Arial, sans-serif; 
+        }
+        .receipt { 
+            width: 300px; 
+            box-shadow: 0 2px 8px rgb(180, 180, 180);
+            margin: 10px auto; 
+            margin-top: 50px;
+            padding: 20px; 
+            border: none; 
+            border-radius: 10px;
+        }
+        h2, p { 
+            text-align: center; 
+            margin: 5px 0; 
+        }
+        .details, 
+        .totals { 
+            margin-top: 20px; 
+        }
+        .totals p { 
+            text-align: right; 
+        }
+        .divider { 
+            border-top: 1px dashed #000; 
+            margin: 10px 0; 
+        }
     </style>
 </head>
 <body>
@@ -19,7 +40,7 @@
         <p>Sanket's Pizza Hut</p>
         <p>Vairag</p>
         <div class="divider"></div>
-        <p><strong>Name:</strong> {{ name }}</p>
+            <p><strong>Name:</strong> {{ name }}</p>
         <p><strong>Date:</strong> {{ date }} <strong>Time:</strong> {{ time }}</p>
         <div class="divider"></div>
         <p><strong>Item:</strong> {{ item }}</p>
