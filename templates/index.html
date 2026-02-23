@@ -4,23 +4,85 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Receipt Generator</title>
+    <style>
+        body{
+            font-family: Arial;
+            background-color: #f4f4f4;
+        }
+        .app-title{
+            font-size: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .recipt-input{
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgb(96 96 96);
+            margin: auto;
+            padding: 30px 20px;
+            width: 400px;
+            margin: 30px auto;
+        }
+        .user-name,
+        .user-items,
+        .item-quantity,
+        .item-price{
+            width: 96%;
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid rgb(180, 180, 180);
+            margin-top: 5px;
+            margin-bottom: 15px;
+            font-size: 14px;
+        }
+        .user-name:focus,
+        .user-items:focus,
+        .item-quantity:focus,
+        .item-price:focus{
+            outline: none;
+            border-color: rgb(255, 217, 0);
+        }
+        .receipt-label{
+            font-size: 15px;
+
+        }
+        .generate-recipt-btn{
+            background-color: rgb(255, 217, 0);
+            padding: 10px 20px;
+            display: block;
+            margin: 0 auto;
+            border: none;
+            border-radius: 10px;
+            color: black;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: opacity 0.15s;
+        }
+        .generate-recipt-btn:hover{
+            opacity: 0.8;
+        }
+        .generate-recipt-btn:active{
+            opacity: 0.6;
+        }
+    </style>
 </head>
 <body>
-    <h2>Generate Receipt</h2>
-    <form action="/generate_receipt" method="POST">
-        <label>Name:</label><br>
-        <input type="text" name="name" required><br><br>
+    <h2 class="app-title">Generate Receipt</h2>
+    <form class="recipt-input" action="/generate_receipt" method="POST">
+        <label class="receipt-label">Name:</label><br>
+        <input class="user-name" type="text" name="name" placeholder="Enter name" required><br><br>
 
-        <label>Item:</label><br>
-        <input type="text" name="item" required><br><br>
+        <label class="receipt-label">Item:</label><br>
+        <input class="user-items" type="text" name="item" placeholder="Enter Item" required><br><br>
 
-        <label>Quantity:</label><br>
-        <input type="number" name="quantity" required><br><br>
+        <label class="receipt-label">Quantity:</label><br>
+        <input class="item-quantity" type="number" name="quantity" placeholder="Qty" required><br><br>
 
-        <label>Price per Item:</label><br>
-        <input type="number" name="price" step="0.01" required><br><br>
+        <label class="receipt-label">Price per Item:</label><br>
+        <input class="item-price" type="number" name="price" step="0.01" placeholder="Price" required><br><br>
 
-        <button type="submit">Generate Receipt</button>
+        <button class="generate-recipt-btn" type="submit">Generate Receipt</button>
     </form>
 </body>
 </html>
